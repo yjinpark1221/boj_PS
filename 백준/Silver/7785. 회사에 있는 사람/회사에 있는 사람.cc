@@ -58,16 +58,12 @@ int main() {
             mp[name] = false;
         }
     }
-    vector<string> v;
-    for (auto a : mp) {
-        if (a.second) {
-            v.push_back(a.first);
+    for (auto it = mp.rbegin(); it != mp.rend(); ++it) {
+        if (it->second) {
+            cout << it->first << "\n";
         }
     }
-    sort(v.begin(), v.end());
-    for (auto it = v.rbegin(); it != v.rend(); ++it) {
-        cout << *it << "\n";
-    }
+
 
 
     return 0;
